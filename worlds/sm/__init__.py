@@ -578,10 +578,95 @@ class SMWorld(World):
                     "Grapple": "Grapple", "Morph": "Morph", "ReserveTank": "Reserve", "Gravity": "Gravity",
                     "XRay": "XRayScope", "SpaceJump": "SpaceJump", "ScrewAttack": "ScrewAttack"
                 }
+                MZMNameToSMType = {
+                    "Energy Tank": "ETank", "Missile Tank": "Missile", "Super Missile Tank": "Super", "Power Bomb Tank": "PowerBomb", "Bomb": "Bomb",
+                    "Charge Beam": "Charge", "Ice Beam": "Ice", "Hi-Jump": "HiJump", "Speed Booster": "SpeedBooster",
+                    "Wave Beam": "Wave", "Long Beam": "Spazer", "Varia Suit": "Varia", "Plasma Beam": "Plasma",
+                    "Morph Ball": "Morph", "Gravity Suit": "Gravity", "Power Grip": "Grapple",
+                    "Space Jump": "SpaceJump", "Screw Attack": "ScrewAttack"
+                }
+                MP1NameToSMType = {
+                    "Energy Tank": "ETank", "Missile Expansion": "Missile", "Super Missile": "Super", "Power Bomb Expansion": "PowerBomb", "Morph Ball Bomb": "Bomb",
+                    "Charge Beam": "Charge", "Ice Beam": "Ice", "Charge Beam (Power)": "Charge", "Charge Beam (Wave)": "Charge", "Charge Beam (Ice)": "Charge", "Charge Beam (Plasma)": "Charge",
+                    "Wave Beam": "Wave", "SpringBall": "SpringBall", "Varia Suit": "Varia", "Plasma Beam": "Plasma",
+                    "Grapple Beam": "Grapple", "Morph Ball": "Morph", "Gravity Suit": "Gravity",
+                    "X-Ray Visor": "XRayScope", "Space Jump Boots": "SpaceJump", "Spider Ball": "SpringBall",
+                    "Power Bomb (Main)": "PowerBomb", "Missile Launcher": "Missile", "Boost Ball": "SpeedBooster",
+                    "Ice Spreader": "Ice", "Wavebuster": "Wave", "Flamethrower": "Plasma", "Thermal Visor": "XRayScope", "Scan Visor": "XRayScope",
+                    "Progressive Power Beam": "Charge", "Progressive Ice Beam": "Ice", "Progressive Wave Beam": "Wave", "Progressive Plasma Beam": "Plasma"
+                }
+                SMMRNameToSMType = {
+                    "ETank": "ETank", "Missile": "Missile", "Super": "Super", "PowerBomb": "PowerBomb", "Bombs": "Bomb",
+                    "Charge": "Charge", "Ice": "Ice", "HiJump": "HiJump", "SpeedBooster": "SpeedBooster",
+                    "Wave": "Wave", "Spazer": "Spazer", "SpringBall": "SpringBall", "Varia": "Varia", "Plasma": "Plasma",
+                    "Grapple": "Grapple", "Morph": "Morph", "ReserveTank": "Reserve", "Gravity": "Gravity",
+                    "XRayScope": "XRayScope", "SpaceJump": "SpaceJump", "ScrewAttack": "ScrewAttack"
+                }
+                SVNameToSMType = {
+                    "Energy Tank": "ETank", "Missile": "Missile", "Super Missile": "Super", "Power Bomb": "PowerBomb", "Bombs": "Bomb",
+                    "Charge Beam": "Charge", "Ice Beam": "Ice", "HiJump": "HiJump", "Speed Booster": "SpeedBooster", "Gravity Boots": "HiJump",
+                    "Wave Beam": "Wave", "Spazer": "Spazer", "Speed Ball": "SpringBall", "Varia Suit": "Varia", "Plasma Beam": "Plasma",
+                    "Grapple Beam": "Grapple", "Morph Ball": "Morph", "Refuel Tank": "Reserve", "Aqua Suit": "Gravity",
+                    "X-Ray Scope": "XRayScope", "Space Jump": "SpaceJump", "Screw Attack": "ScrewAttack",
+                    "Hypercharge": "Charge", "Small Ammo": "Missile", "Large Ammo": "Super",
+                    "Space Jump Boost": "SpaceJump"
+                }
+                SJNameToSMType = {
+                    "Heart": "ETank", "Magic Bolt": "Missile", "Baseball": "Super", "Sparksuit": "PowerBomb", "Rat Burst": "Bomb",
+                    "Gem Of Death": "Charge", "Gem Of Ice": "Ice", "Feather": "HiJump", "Rat Dasher": "SpeedBooster",
+                    "Gem Of Blood": "Wave", "Purple Locket": "Varia", "Gem Of Storms": "Plasma",
+                    "Rat Cloak": "Morph", "Lucky Frog": "Reserve", "Sanguine Fin": "Gravity",
+                    "Magic Broom": "SpaceJump", "Wave Bangle": "ScrewAttack", "Wallkicks": "HiJump",
+                    "Magic Soap": "Missile", "Dreamer's Crown": "SpeedBooster"
+                }
+                AM2RNameToSMType = {
+                    "Energy Tank": "ETank", "Missile": "Missile", "Super Missile": "Super", "Power Bomb": "PowerBomb", "Bombs": "Bomb",
+                    "Charge Beam": "Charge", "Ice Beam": "Ice", "Hi Jump": "HiJump", "Speed Booster": "SpeedBooster",
+                    "Wave Beam": "Wave", "Spazer": "Spazer", "Spring Ball": "SpringBall", "Varia Suit": "Varia", "Plasma Beam": "Plasma",
+                    "Morph Ball": "Morph", "ReserveTank": "Reserve", "Gravity Suit": "Gravity",
+                    "Space Jump": "SpaceJump", "Screw Attack": "ScrewAttack"
+                }
+                FusionNameToSMType = {
+                    "Missile Data": "Missile", "Morph Ball": "Morph", "Charge Beam": "Charge", "Bomb Data": "Bomb",
+                    "Hi-Jump": "HiJump", "Speed Booster": "SpeedBooster", "Super Missile": "Super", "Varia Suit": "Varia",
+                    "Wide Beam": "Spazer", "Power Bomb Data": "PowerBomb", "Space Jump": "SpaceJump", "Plasma Beam": "Plasma",
+                    "Gravity Suit": "Gravity", "Wave Beam": "Wave", "Screw Attack": "ScrewAttack", "Ice Beam": "Ice", "Missile Tank": "Missile",
+                    "Energy Tank": "ETank", "Power Bomb Tank": "PowerBomb"
+                }
+                MSRNameToSMType = {
+                    "Missile Launcher": "Missile", "Super Missile": "Super", "Power Bomb": "PowerBomb",
+                    "Wave Beam": "Wave", "Spazer Beam": "Spazer", "Plasma Beam": "Plasma", "Charge Beam": "Charge", "Ice Beam": "Ice",
+                    "Morph Ball": "Morph", "Bomb": "Bomb", "Spring Ball": "SpringBall",
+                    "Varia Suit": "Varia", "Gravity Suit": "Gravity",
+                    "Grapple Beam": "Grapple", "High Jump Boots": "HiJump", "Space Jump": "SpaceJump", "Screw Attack": "ScrewAttack",
+                    "Energy Tank": "ETank", "Missile Tank": "Missile", "Super Missile Tank": "Super", "Power Bomb Tank": "PowerBomb",
+                    "Energy Reserve Tank": "Reserve", "Aeion Reserve Tank": "Reserve", "Missile Reserve Tank": "Reserve"
+                }
+                FNaFbNameToSMType = {
+                    "Varia Suit": "Varia"
+                }
                 if isinstance(itemLoc.item, SMItem) and itemLoc.item.type in ItemManager.Items:
                     itemId = ItemManager.Items[itemLoc.item.type].Id
                 elif itemLoc.item.game == "SMZ3" and itemLoc.item.name in SMZ3NameToSMType.keys():
                     itemId = ItemManager.Items[SMZ3NameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Metroid: Zero Mission" and itemLoc.item.name in MZMNameToSMType.keys():
+                    itemId = ItemManager.Items[MZMNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Metroid Prime" and itemLoc.item.name in MP1NameToSMType.keys():
+                    itemId = ItemManager.Items[MP1NameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Super Metroid Map Rando" and itemLoc.item.name in SMMRNameToSMType.keys():
+                    itemId = ItemManager.Items[SMMRNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Subversion" and itemLoc.item.name in SVNameToSMType.keys():
+                    itemId = ItemManager.Items[SVNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Super Junkoid" and itemLoc.item.name in SJNameToSMType.keys():
+                    itemId = ItemManager.Items[SJNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "AM2R" and itemLoc.item.name in AM2RNameToSMType.keys():
+                    itemId = ItemManager.Items[AM2RNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Metroid Fusion" and itemLoc.item.name in FusionNameToSMType.keys():
+                    itemId = ItemManager.Items[FusionNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Metroid: Samus Returns" and itemLoc.item.name in MSRNameToSMType.keys():
+                    itemId = ItemManager.Items[MSRNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Five Nights at Fuckboy's" and itemLoc.item.name in FNaFbNameToSMType.keys():
+                    itemId = ItemManager.Items[FNaFbNameToSMType[itemLoc.item.name]].Id
                 else:
                     itemId = ItemManager.Items["ArchipelagoItem"].Id + idx
                     multiWorldItems.append({"sym": symbols["message_item_names"],

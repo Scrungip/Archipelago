@@ -472,11 +472,199 @@ class Patch:
                 "Energy Reserve Tank": ItemType.ReserveTank, "Aeion Reserve Tank": ItemType.ReserveTank, "Missile Reserve Tank": ItemType.ReserveTank
             }
             return MSRNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "Metroid Dread"):
+            DreadNameToSMZ3Code = {
+                "Bomb": ItemType.Bombs, "Charge Beam": ItemType.Charge, "Cross Bomb": ItemType.Bombs,
+                "Diffusion Beam": ItemType.Charge, "Energy Part": ItemType.ETank, "Energy Tank": ItemType.ETank,
+                "Grapple Beam": ItemType.Grapple, "Gravity Suit": ItemType.Gravity, "Super Missile": ItemType.Super,
+                "Morph Ball": ItemType.Morph, "Missile Tank": ItemType.Missile, "Missile+ Tank": ItemType.Missile,
+                "Plasma Beam": ItemType.Plasma, "Power Bomb": ItemType.PowerBomb, "Power Bomb Tank": ItemType.PowerBomb,
+                "Screw Attack": ItemType.ScrewAttack, "Space Jump": ItemType.SpaceJump, "Speed Booster": ItemType.SpeedBooster,
+                "Speed Booster Upgrade": ItemType.SpeedBooster, "Spin Boost": ItemType.SpaceJump, "Varia Suit": ItemType.Varia,
+                "Wave Beam": ItemType.Wave, "Wide Beam": ItemType.Spazer,
+                "Progressive Charge Beam": ItemType.Charge, "Progressive Bomb": ItemType.Bombs, "Progressive Spin": ItemType.SpaceJump
+            }
+            return DreadNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "The Legend of Zelda"):
+            Z1NameToSMZ3Code = {
+                "Arrow": ItemType.Arrow, "Silver Arrow": ItemType.SilverArrows,
+                "Blue Ring": ItemType.ProgressiveTunic, "Red Ring": ItemType.ProgressiveTunic,
+                "Bomb": ItemType.BombUpgrade10, "Book of Magic": ItemType.Book, "Boomerang": ItemType.BlueBoomerang,
+                "Bow": ItemType.Bow, "Candle": ItemType.Lamp, "Five Rupees": ItemType.FiveRupees, "Heart Container": ItemType.HeartContainer,
+                "Magical Boomerang": ItemType.RedBoomerang, "Magical Key": ItemType.BigKey, "Magical Rod": ItemType.Firerod,
+                "Magical Shield": ItemType.ProgressiveShield, "Magical Sword": ItemType.ProgressiveSword, "Power Bracelet": ItemType.ProgressiveGlove,
+                "Recorder": ItemType.Flute, "Red Candle": ItemType.Lamp, "Sword": ItemType.ProgressiveSword, "White Sword": ItemType.ProgressiveSword
+            }
+            return Z1NameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "The Minish Cap"):
+            MinishNameToSMZ3Code = {
+                "Smith's Sword": ItemType.ProgressiveSword, "White Sword": ItemType.ProgressiveSword, "White Sword (Two Elements)": ItemType.ProgressiveSword,
+                "White Sword (Three Elements)": ItemType.ProgressiveSword, "Four Sword": ItemType.ProgressiveSword, "Bomb": ItemType.BombUpgrade10,
+                "Remote Bomb": ItemType.BombUpgrade10, "Bow": ItemType.Bow, "Light Arrow": ItemType.SilverArrows, "Boomerang": ItemType.BlueBoomerang,
+                "Magic Boomerang": ItemType.RedBoomerang, "Shield": ItemType.ProgressiveShield, "Mirror Shield": ItemType.ProgressiveShield,
+                "Lantern": ItemType.Lamp, "Pegasus Boots": ItemType.Boots, "Fire Rod": ItemType.Firerod, "Ocarina": ItemType.Flute,
+                "Bottle (Null)": ItemType.Bottle, "Bottle (Empty)": ItemType.Bottle, "Bottle (Lon Lon Butter)": ItemType.Bottle,
+                "Bottle (Lon Lon Milk)": ItemType.Bottle, "Bottle (Lon Lon Milk (1/2))": ItemType.Bottle, "Bottle (Red Potion)": ItemType.Bottle,
+                "Bottle (Blue Potion)": ItemType.Bottle, "Bottle (Water)": ItemType.Bottle, "Bottle (Mineral Water)": ItemType.Bottle,
+                "Bottle (Bottled Fairy)": ItemType.Bottle, "Bottle (Red Picolyte)": ItemType.Bottle, "Bottle (Orange Picolyte)": ItemType.Bottle,
+                "Bottle (Yellow Picolyte)": ItemType.Bottle, "Bottle (Green Picolyte)": ItemType.Bottle, "Bottle (Blue Picolyte)": ItemType.Bottle,
+                "Bottle (White Picolyte)": ItemType.Bottle, "Bottle (Nayru Charm)": ItemType.Bottle, "Bottle (Farore Charm)": ItemType.Bottle,
+                "Bottle (Dins Charm)": ItemType.Bottle,
+                "Smith Sword (Quest)": ItemType.ProgressiveSword, "Broken Picori Blade": ItemType.ProgressiveSword, "LonLon Key": ItemType.Key,
+                "Wakeup Mushroom": ItemType.Mushroom, "Red Book (Hyrulian Bestiary)": ItemType.Book, "Green Book (Picori Legend)": ItemType.Book,
+                "Blue Book (History of Masks)": ItemType.Book, "Graveyard Key": ItemType.Key, "Power Bracelets": ItemType.ProgressiveGlove,
+                "Flippers": ItemType.Flippers, "Hyrule Map": ItemType.Map, "1 Rupee": ItemType.OneRupee, "5 Rupees": ItemType.FiveRupees,
+                "20 Rupees": ItemType.TwentyRupees, "50 Rupees": ItemType.FiftyRupees, "100 Rupees": ItemType.OneHundredRupees,
+                "200 Rupees": ItemType.OneHundredRupees, "Heart Container": ItemType.HeartContainer, "Piece of Heart": ItemType.HeartPiece,
+                "5 Bomb Refill": ItemType.ThreeBombs, "10 Bomb Refill": ItemType.ThreeBombs, "30 Bomb Refill": ItemType.ThreeBombs,
+                "5 Arrow Refill": ItemType.TenArrows, "10 Arrow Refill": ItemType.TenArrows, "30 Arrow Refill": ItemType.TenArrows,
+                "Progressive Sword": ItemType.ProgressiveSword, "Progressive Bow": ItemType.Bow, "Progressive Boomerang": ItemType.RedBoomerang,
+                "Progressive Shield": ItemType.ProgressiveShield,
+                "Dungeon Map (DWS)": ItemType.Map, "Dungeon Map (CoF)": ItemType.Map, "Dungeon Map (FoW)": ItemType.Map,
+                "Dungeon Map (ToD)": ItemType.Map, "Dungeon Map (PoW)": ItemType.Map, "Dungeon Map (DHC)": ItemType.Map,
+                "Big Key (DWS)": ItemType.BigKey, "Big Key (CoF)": ItemType.BigKey, "Big Key (FoW)": ItemType.BigKey,
+                "Big Key (ToD)": ItemType.BigKey, "Big Key (PoW)": ItemType.BigKey, "Big Key (DHC)": ItemType.BigKey,
+                "Dungeon Compass (DWS)": ItemType.Compass, "Dungeon Compass (CoF)": ItemType.Compass, "Dungeon Compass (FoW)": ItemType.Compass,
+                "Dungeon Compass (ToD)": ItemType.Compass, "Dungeon Compass (PoW)": ItemType.Compass, "Dungeon Compass (DHC)": ItemType.Compass,
+                "Small Key (DWS)": ItemType.Key, "Small Key (CoF)": ItemType.Key, "Small Key FoW)": ItemType.Key,
+                "Small Key (ToD)": ItemType.Key, "Small Key (PoW)": ItemType.Key, "Small Key (DHC)": ItemType.Key, "Small Key (RC)": ItemType.Key,
+            }
+            return MinishNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
         elif (location.APLocation.item.game == "Five Nights at Fuckboy's"):
             FNaFbNameToSMZ3Code = {
                 "Varia Suit": ItemType.Varia, "Moon Pearl": ItemType.MoonPearl, "Hylian Shield": ItemType.ProgressiveShield
             }
             return FNaFbNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "Twilight Princess"):
+            TPNameToSMZ3Code = {
+                "Green Rupee": ItemType.OneRupee, "Blue Rupee": ItemType.FiveRupees, "Yellow Rupee": ItemType.FiveRupees,
+                "Red Rupee": ItemType.TwentyRupees, "Purple Rupee": ItemType.FiftyRupees, "Orange Rupee": ItemType.OneHundredRupees,
+                "Silver Rupee": ItemType.ThreeHundredRupees, "Links Purple Rupee": ItemType.FiftyRupees,
+                "Bombs (5)": ItemType.ThreeBombs, "Bombs (10)": ItemType.ThreeBombs, "Bombs (20)": ItemType.ThreeBombs, "Bombs (20)": ItemType.ThreeBombs,
+                "Water Bombs (3)": ItemType.ThreeBombs, "Water Bombs (5)": ItemType.ThreeBombs, "Water Bombs (10)": ItemType.ThreeBombs, "Water Bombs (15)": ItemType.ThreeBombs,
+                "Bomblings (3)": ItemType.ThreeBombs, "Bomblings (5)": ItemType.ThreeBombs, "Bomblings (10)": ItemType.ThreeBombs,
+                "Piece of Heart": ItemType.HeartPiece, "Heart Container": ItemType.HeartContainer,
+                "Progressive Master Sword": ItemType.ProgressiveSword, "Ordon Shield": ItemType.ProgressiveShield, "Hylian Shield": ItemType.ProgressiveShield,
+                "Magic Armor": ItemType.ProgressiveTunic, "Zora Armor": ItemType.ProgressiveTunic, "Gale Boomerang": ItemType.RedBoomerang,
+                "Progressive Hero's Bow": ItemType.Bow, "Progressive Clawshot": ItemType.Hookshot, "Lantern": ItemType.Lamp,
+                "Bomb Bag": ItemType.BombUpgrade10, "Progressive Bottle": ItemType.Bottle,
+                "Forest Temple Small Key": ItemType.Key, "Goron Mines Small Key": ItemType.Key, "Lakebed Temple Small Key": ItemType.Key,
+                "Arbiters Grounds Small Key": ItemType.Key, "Snowpeak Ruins Small Key": ItemType.Key, "Temple of Time Small Key": ItemType.Key,
+                "City in The Sky Small Key": ItemType.Key, "Palace of Twilight Small Key": ItemType.Key, "Hyrule Castle Small Key": ItemType.Key,
+                "Gate Keys": ItemType.Key, "Gerudo Desert Bulblin Camp Key": ItemType.Key,
+                "Forest Temple Big Key": ItemType.BigKey, "Lakebed Temple Big Key": ItemType.BigKey, "Goron Mines Key Shard": ItemType.BigKey,
+                "Arbiters Grounds Big Key": ItemType.BigKey, "Bedroom Key": ItemType.BigKey, "Temple of Time Big Key": ItemType.BigKey,
+                "City in The Sky Big Key": ItemType.BigKey, "Palace of Twilight Big Key": ItemType.BigKey, "Hyrule Castle Big Key": ItemType.BigKey,
+                "Forest Temple Compass": ItemType.Compass, "Goron Mines Compass": ItemType.Compass, "Lakebed Temple Compass": ItemType.Compass,
+                "Arbiters Grounds Compass": ItemType.Compass, "Snowpeak Ruins Compass": ItemType.Compass, "Temple of Time Compass": ItemType.Compass,
+                "City in The Sky Compass": ItemType.Compass, "Palace of Twilight Compass": ItemType.Compass, "Hyrule Castle Compass": ItemType.Compass,
+                "Forest Temple Map": ItemType.Map, "Goron Mines Map": ItemType.Map, "Lakebed Temple Map": ItemType.Map, "Arbiters Grounds Map": ItemType.Map,
+                "Snowpeak Ruins Map": ItemType.Map, "Temple of Time Map": ItemType.Map, "City in The Sky Map": ItemType.Map, "Palace of Twilight Map": ItemType.Map,
+                "Hyrule Castle Map": ItemType.Map, "Progressive Sky Book": ItemType.Book, "Giant Bomb Bag": ItemType.BombUpgrade10
+            }
+            return TPNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "The Wind Waker"):
+            TWWNameToSMZ3Code = {
+                "Boomerang": ItemType.RedBoomerang, "Magic Armor": ItemType.ProgressiveTunic, "Bombs": ItemType.BombUpgrade10,
+                "Hookshot": ItemType.Hookshot, "Skull Hammer": ItemType.Hammer, "Power Bracelets": ItemType.ProgressiveGlove,
+                "Progressive Sword": ItemType.ProgressiveSword, "Progressive Shield": ItemType.ProgressiveShield, "Progressive Bow": ItemType.Bow,
+                "Progressive Magic Meter": ItemType.HalfMagic, "Quiver Capacity Upgrade": ItemType.ArrowUpgrade10, "Bomb Bag Capacity Upgrade": ItemType.BombUpgrade10,
+                "Empty Bottle": ItemType.Bottle, "Green Rupee": ItemType.OneRupee, "Blue Rupee": ItemType.FiveRupees, "Yellow Rupee": ItemType.FiveRupees,
+                "Red Rupee": ItemType.TwentyRupees, "Purple Rupee": ItemType.FiftyRupees, "Orange Rupee": ItemType.OneHundredRupees, "Silver Rupee": ItemType.ThreeHundredRupees,
+                "Rainbow Rupee": ItemType.ThreeHundredRupees, "Piece of Heart": ItemType.HeartPiece, "Heart Container": ItemType.HeartContainer,
+                "DRC Big Key": ItemType.BigKey, "FW Big Key": ItemType.BigKey, "TotG Big Key": ItemType.BigKey, "ET Big Key": ItemType.BigKey, "WT Big Key": ItemType.BigKey,
+                "DRC Small Key": ItemType.Key, "FW Small Key": ItemType.Key, "TotG Small Key": ItemType.Key, "ET Small Key": ItemType.Key, "WT Small Key": ItemType.Key,
+                "DRC Dungeon Map": ItemType.Map, "FW Dungeon Map": ItemType.Map, "TotG Dungeon Map": ItemType.Map, "FF Dungeon Map": ItemType.Map, "ET Dungeon Map": ItemType.Map, "WT Dungeon Map": ItemType.Map,
+                "DRC Compass": ItemType.Compass, "FW Compass": ItemType.Compass, "TotG Compass": ItemType.Compass, "FF Compass": ItemType.Compass, "ET Compass": ItemType.Compass, "WT Compass": ItemType.Compass
+
+            }
+            return TWWNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "Links Awakening DX" or "Links Awakening DX Beta"):
+            LADXNameToSMZ3Code = {
+                "Progressive Power Bracelet": ItemType.ProgressiveGlove, "Progressive Shield": ItemType.ProgressiveShield, "Bow": ItemType.Bow,
+                "Hookshot": ItemType.Hookshot, "Magic Rod": ItemType.Firerod, "Pegasus Boots": ItemType.Boots, "Ocarina": ItemType.Flute,
+                "Shovel": ItemType.Shovel, "Magic Powder": ItemType.Powder, "Bomb": ItemType.BombUpgrade10,
+                "Progressive Sword": ItemType.ProgressiveSword, "Flippers": ItemType.Flippers,
+                "Tail Key": ItemType.BigKey, "Angler Key": ItemType.BigKey, "Face Key": ItemType.BigKey, "Bird Key": ItemType.BigKey, "Slime Key": ItemType.BigKey,
+                "20 Rupees": ItemType.TwentyRupees, "50 Rupees": ItemType.FiftyRupees, "100 Rupees": ItemType.OneHundredRupees,
+                "200 Rupees": ItemType.ThreeHundredRupees, "500 Rupees": ItemType.ThreeHundredRupees,
+                "Boomerang": ItemType.RedBoomerang, "Heart Piece": ItemType.HeartPiece, "10 Arrows": ItemType.TenArrows,
+                "Single Arrow": ItemType.Arrow, "Max Powder Upgrade": ItemType.Powder, "Max Bombs Upgrade": ItemType.BombUpgrade10,
+                "Max Arrows Upgrade": ItemType.ArrowUpgrade10, "Red Tunic": ItemType.ProgressiveTunic, "Blue Tunic":ItemType.ProgressiveTunic,
+                "Heart Container": ItemType.HeartContainer, "Bad Heart Container": ItemType.HeartContainer, "Toadstool": ItemType.Mushroom,
+                "Key": ItemType.Key,
+                "Small Key (Tail Cave)": ItemType.Key, "Small Key (Bottle Grotto)": ItemType.Key, "Small Key (Key Cavern)": ItemType.Key,
+                "Small Key (Angler's Tunnel)": ItemType.Key, "Small Key (Catfish's Maw)": ItemType.Key, "Small Key (Face Shrine)": ItemType.Key,
+                "Small Key (Eagle's Tower)": ItemType.Key, "Small Key (Turtle Rock)": ItemType.KeyTR, "Small Key (Color Dungeon)": ItemType.Key,
+                "Nightmare Key": ItemType.BigKey,
+                "Nightmare Key (Tail Cave)": ItemType.BigKey, "Nightmare Key (Bottle Grotto)": ItemType.BigKey, "Nightmare Key (Key Cavern)": ItemType.BigKey,
+                "Nightmare Key (Angler's Tunnel)": ItemType.BigKey, "Nightmare Key (Catfish's Maw)": ItemType.BigKey, "Nightmare Key (Face Shrine)": ItemType.BigKey,
+                "Nightmare Key (Eagle's Tower)": ItemType.BigKey, "Nightmare Key (Turtle Rock)": ItemType.BigKeyTR, "Nightmare Key (Color Dungeon)": ItemType.BigKey,
+                "Map": ItemType.Map,
+                "Dungeon Map (Tail Cave)": ItemType.Map, "Dungeon Map (Bottle Grotto)": ItemType.Map, "Dungeon Map (Key Cavern)": ItemType.Map,
+                "Dungeon Map (Angler's Tunnel)": ItemType.Map, "Dungeon Map (Catfish's Maw)": ItemType.Map, "Dungeon Map (Face Shrine)": ItemType.Map,
+                "Dungeon Map (Eagle's Tower)": ItemType.Map, "Dungeon Map (Turtle Rock)": ItemType.MapTR, "Dungeon Map (Color Dungeon)": ItemType.Map,
+                "Compass": ItemType.Compass,
+                "Compass (Tail Cave)": ItemType.Compass, "Compass (Bottle Grotto)": ItemType.Compass, "Compass (Key Cavern)": ItemType.Compass,
+                "Compass (Angler's Tunnel)": ItemType.Compass, "Compass (Catfish's Maw)": ItemType.Compass, "Compass (Face Shrine)": ItemType.Compass,
+                "Compass (Eagle's Tower)": ItemType.Compass, "Compass (Turtle Rock)": ItemType.CompassTR, "Compass (Color Dungeon)": ItemType.Compass
+            }
+            return LADXNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "Majora's Mask Recompiled"):
+            MMRNameToSMZ3Code = {
+                "Progressive Magic": ItemType.HalfMagic, "Bomber's Notebook": ItemType.Book, "Ocarina of Time": ItemType.Flute,
+                "Heart Container": ItemType.HeartContainer, "Heart Piece": ItemType.HeartPiece, "Bottle": ItemType.Bottle,
+                "Bottle of Milk": ItemType.Bottle, "Bottle of Chateau Romani": ItemType.Bottle,
+                "Progressive Sword": ItemType.ProgressiveSword, "Great Fairy Sword": ItemType.ProgressiveSword,
+                "Progressive Bow": ItemType.Bow, "Fire Arrow": ItemType.Firerod, "Ice Arrow": ItemType.Icerod,
+                "Light Arrow": ItemType.SilverArrows, "Hookshot": ItemType.Hookshot, "Progressive Shield": ItemType.ProgressiveShield,
+                "Bottle of Red Potion": ItemType.Bottle,
+                "Clock Town Map": ItemType.Map, "Woodfall Map": ItemType.Map, "Snowhead Map": ItemType.Map,
+                "Romani Ranch Map": ItemType.Map, "Great Bay Map": ItemType.Map, "Stone Tower Map": ItemType.Map,
+                "Small Key (Woodfall)": ItemType.Key, "Small Key (Snowhead)": ItemType.Key, "Small Key (Great Bay)": ItemType.Key,
+                "Small Key (Stone Tower)": ItemType.Key,
+                "Dungeon Map (Woodfall)": ItemType.Map, "Dungeon Map (Snowhead)": ItemType.Map, "Dungeon Map (Great Bay)": ItemType.Map,
+                "Dungeon Map (Stone Tower)": ItemType.Map,
+                "Compass (Woodfall)": ItemType.Compass, "Compass (Snowhead)": ItemType.Compass, "Compass (Great Bay)": ItemType.Compass,
+                "Compass (Stone Tower)": ItemType.Compass,
+                "Boss Key (Woodfall)": ItemType.BigKey, "Boss Key (Snowhead)": ItemType.BigKey, "Boss Key (Great Bay)": ItemType.BigKey,
+                "Boss Key (Stone Tower)": ItemType.BigKey,
+                "Progressive Bomb Bag": ItemType.BombUpgrade10, "Bundle of 10 Arrows": ItemType.TenArrows, "Bundle of 30 Arrows": ItemType.TenArrows,
+                "Bomb Refill 10": ItemType.ThreeBombs, "Bomb Refill 30": ItemType.ThreeBombs, "Progressive Bombchu Bag": ItemType.BombUpgrade10,
+                "Bombchu (1)": ItemType.ThreeBombs, "Bombchu (5)": ItemType.ThreeBombs, "Bombchu (10)": ItemType.ThreeBombs,
+                "Blue Rupee": ItemType.FiveRupees, "Crimson Rupee": ItemType.ThreeHundredRupees, "Red Rupee": ItemType.TwentyRupees,
+                "Purple Rupee": ItemType.FiftyRupees, "Silver Rupee": ItemType.OneHundredRupees, "Gold Rupee": ItemType.ThreeHundredRupees
+            }
+            return MMRNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
+        elif (location.APLocation.item.game == "The Legend of Zelda - Oracle of Ages"): # Not finished
+            OoANameToSMZ3Code = {
+                "Progressive Shield": ItemType.ProgressiveShield, "Bombs (10)": ItemType.ThreeBombs, "Progressive Sword": ItemType.ProgressiveSword,
+                "Boomerang": ItemType.RedBoomerang, "Cane of Somaria": ItemType.Somaria, "Biggoron's Sword": ItemType.ProgressiveSword,
+                "Bombchus (10)": ItemType.ThreeBombs, "Ricky's Flute": ItemType.Flute, "Dimitri's Flute": ItemType.Flute, "Moosh's Flute": ItemType.Flute,
+                "Shovel": ItemType.Shovel, "Progressive Bracelet": ItemType.ProgressiveGlove, "Rupee (1)": ItemType.OneRupee,
+                "Rupees (5)": ItemType.FiveRupees, "Rupees (10)": ItemType.FiveRupees, "Rupees (20)": ItemType.TwentyRupees,
+                "Rupees (30)": ItemType.TwentyRupees, "Rupees (50)": ItemType.FiftyRupees, "Rupees (100)": ItemType.OneHundredRupees,
+                "Rupees (200)": ItemType.ThreeHundredRupees, "Heart Container": ItemType.HeartContainer, "Piece of Heart": ItemType.HeartPiece,
+                "Progressive Flippers": ItemType.Flippers,
+                "Small Key (Maku Path)": ItemType.Key, "Small Key (Spirit's Grave)": ItemType.Key, "Small Key (Wing Dungeon)": ItemType.Key,
+                "Small Key (Moonlit Grotto)": ItemType.Key, "Small Key (Skull Dungeon)": ItemType.Key, "Small Key (Crown Dungeon)": ItemType.Key,
+                "Small Key (Mermaid's Cave Past)": ItemType.Key, "Small Key (Mermaid's Cave Present)": ItemType.Key, "Small Key (Jabu-Jabu's Belly)": ItemType.Key,
+                "Small Key (Ancient Tomb)": ItemType.Key, "Small Key (Linked Hero's Cave)": ItemType.Key,
+                "Master Key (Maku Path)": ItemType.BigKey, "Master Key (Spirit's Grave)": ItemType.BigKey, "Master Key (Wing Dungeon)": ItemType.BigKey,
+                "Master Key (Moonlit Grotto)": ItemType.BigKey, "Master Key (Skull Dungeon)": ItemType.BigKey, "Master Key (Crown Dungeon)": ItemType.BigKey,
+                "Master Key (Mermaid's Cave Past)": ItemType.BigKey, "Master Key (Mermaid's Cave Present)": ItemType.BigKey, "Master Key (Jabu-Jabu's Belly)": ItemType.BigKey,
+                "Master Key (Ancient Tomb)": ItemType.BigKey, "Master Key (Linked Hero's cave)": ItemType.BigKey,
+                "Boss Key (Spirit's Grave)": ItemType.BigKey, "Boss Key (Wing Dungeon)": ItemType.BigKey, "Boss Key (Moonlit Grotto)": ItemType.BigKey,
+                "Boss Key (Skull Dungeon)": ItemType.BigKey, "Boss Key (Crown Dungeon)": ItemType.BigKey, "Boss Key (Mermaid's Cave)": ItemType.BigKey,
+                "Boss Key (Jabu-Jabu's Belly)": ItemType.BigKey, "Boss Key (Ancient Tomb)": ItemType.BigKey,
+                "Compass (Spirit's Grave)": ItemType.Compass, "Compass (Wing Dungeon)": ItemType.Compass, "Compass (Moonlit Grotto)": ItemType.Compass,
+                "Compass (Skull Dungeon)": ItemType.Compass, "Compass (Crown Dungeon)": ItemType.Compass, "Compass (Mermaid's Cave Past)": ItemType.Compass,
+                "Compass (Mermaid's Cave Present)": ItemType.Compass, "Compass (Jabu-Jabu's Belly)": ItemType.Compass, "Compass (Ancient Tomb)": ItemType.Compass,
+                "Dungeon Map (Spirit's Grave)": ItemType.Map, "Dungeon Map (Wing Dungeon)": ItemType.Map, "Dungeon Map (Moonlit Grotto)": ItemType.Map,
+                "Dungeon Map (Skull Dungeon)": ItemType.Map, "Dungeon Map (Crown Dungeon)": ItemType.Map, "Dungeon Map (Mermaid's Cave Past)": ItemType.Map,
+                "Dungeon Map (Mermaid's Cave Present)": ItemType.Map, "Dungeon Map (Jabu-Jabu's Belly)": ItemType.Map, "Dungeon Map (Ancient Tomb)": ItemType.Map,
+            }
+            return OoANameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
 
         else:
             return ItemType.Something.value

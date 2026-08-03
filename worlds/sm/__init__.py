@@ -645,6 +645,17 @@ class SMWorld(World):
                 FNaFbNameToSMType = {
                     "Varia Suit": "Varia"
                 }
+                DreadNameToSMType = {
+                    "Bomb": "Bomb", "Charge Beam": "Charge", "Cross Bomb": "Bomb",
+                    "Diffusion Beam": "Charge", "Energy Part": "ETank", "Energy Tank": "ETank",
+                    "Grapple Beam": "Grapple", "Gravity Suit": "Gravity", "Super Missile": "Super",
+                    "Morph Ball": "Morph", "Missile Tank": "Missile", "Missile+ Tank": "Missile",
+                    "Plasma Beam": "Plasma", "Power Bomb": "PowerBomb", "Power Bomb Tank": "PowerBomb",
+                    "Screw Attack": "ScrewAttack", "Space Jump": "SpaceJump", "Speed Booster": "SpeedBooster",
+                    "Speed Booster Upgrade": "SpeedBooster", "Spin Boost": "SpaceJump", "Varia Suit": "Varia",
+                    "Wave Beam": "Wave", "Wide Beam": "Spazer", "Progressive Charge Beam": "Charge",
+                    "Progressive Bomb": "Bomb", "Progressive Spin": "SpaceJump"
+                }
                 if isinstance(itemLoc.item, SMItem) and itemLoc.item.type in ItemManager.Items:
                     itemId = ItemManager.Items[itemLoc.item.type].Id
                 elif itemLoc.item.game == "SMZ3" and itemLoc.item.name in SMZ3NameToSMType.keys():
@@ -667,6 +678,8 @@ class SMWorld(World):
                     itemId = ItemManager.Items[MSRNameToSMType[itemLoc.item.name]].Id
                 elif itemLoc.item.game == "Five Nights at Fuckboy's" and itemLoc.item.name in FNaFbNameToSMType.keys():
                     itemId = ItemManager.Items[FNaFbNameToSMType[itemLoc.item.name]].Id
+                elif itemLoc.item.game == "Metroid Dread" and itemLoc.item.name in DreadNameToSMType.keys():
+                    itemId = ItemManager.Items[DreadNameToSMType[itemLoc.item.name]].Id
                 else:
                     itemId = ItemManager.Items["ArchipelagoItem"].Id + idx
                     multiWorldItems.append({"sym": symbols["message_item_names"],

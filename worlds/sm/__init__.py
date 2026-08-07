@@ -654,7 +654,8 @@ class SMWorld(World):
                     "Screw Attack": "ScrewAttack", "Space Jump": "SpaceJump", "Speed Booster": "SpeedBooster",
                     "Speed Booster Upgrade": "SpeedBooster", "Spin Boost": "SpaceJump", "Varia Suit": "Varia",
                     "Wave Beam": "Wave", "Wide Beam": "Spazer", "Progressive Charge Beam": "Charge",
-                    "Progressive Bomb": "Bomb", "Progressive Spin": "SpaceJump"
+                    "Progressive Bomb": "Bomb", "Progressive Spin": "SpaceJump",
+                    "Progressive Beam": "Charge", "Progressive Suit": "Varia"
                 }
                 if isinstance(itemLoc.item, SMItem) and itemLoc.item.type in ItemManager.Items:
                     itemId = ItemManager.Items[itemLoc.item.type].Id

@@ -482,7 +482,8 @@ class Patch:
                 "Screw Attack": ItemType.ScrewAttack, "Space Jump": ItemType.SpaceJump, "Speed Booster": ItemType.SpeedBooster,
                 "Speed Booster Upgrade": ItemType.SpeedBooster, "Spin Boost": ItemType.SpaceJump, "Varia Suit": ItemType.Varia,
                 "Wave Beam": ItemType.Wave, "Wide Beam": ItemType.Spazer,
-                "Progressive Charge Beam": ItemType.Charge, "Progressive Bomb": ItemType.Bombs, "Progressive Spin": ItemType.SpaceJump
+                "Progressive Charge Beam": ItemType.Charge, "Progressive Bomb": ItemType.Bombs, "Progressive Spin": ItemType.SpaceJump,
+                "Progressive Beam": ItemType.Charge, "Progressive Suit": ItemType.Varia
             }
             return DreadNameToSMZ3Code.get(location.APLocation.item.name, ItemType.Something).value
         elif (location.APLocation.item.game == "The Legend of Zelda"):
